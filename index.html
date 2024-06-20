@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weatherapp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="wrapper-container">
+            <h1 id="heading">WEATHER APP</h1>
+            <div id="two-tab">
+                <div class="tab" current-weather-tab>Your Weather</div>
+                <div class="tab" user-weather-tab>Search Weather</div>
+            </div>
+            <div id="content-container">
+                <div class="grant-location-div commonclass">
+                    <img id="first-img" src="./assets/location.png" height="40px" width="40px" loading="lazy">
+                    <h3>Grant Location Access</h3>
+                    <p>Allow Access To Get Weather Information</p>
+                    <button class="btn" grant-access>GRANT ACCESS</button>
+                </div>
+                <form class="search-weather-container ">
+                    <input placeholder="Search Your City...." placeholder-data>
+                    <button type="submit">
+                        <img class="search-btn" src="./assets/search.png" height="15px" width="15xpx" search-info>
+                    </button>
+                </form>
+                <div class="loading-container commonclass">
+                    <img src="./assets/loading.gif" height="80px" width="80px">
+                    <p>Loading...</p>
+                </div>
+                <div class="user-weatherdetails-container commonclass" onload=loaded>
+                    <div class="name">
+                        <p name-data></p>
+                        <img country-flag>
+                    </div>
+                    <p weather-desc></p>
+                    <img weather-img>
+                    <p temp-data></p>
+                    <div class="weather-info">
+                        <div class="parameter">
+                            <img src="./assets/wind.png">
+                            <p class="pp">WINDSPEED</p>
+                            <p windspeed-data></p>
+                        </div>
+
+                        <div class="parameter">
+                            <img src="./assets/humidity.png">
+                            <p class="pp">HUMIDITY</p>
+                            <p humidity-data></p>
+                        </div>
+
+                        <div class="parameter">
+                            <img src="./assets/cloud.png">
+                            <p class="pp">CLOUDS</p>
+                            <p cloud-data></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="not-found commonclass">
+                    <img src="./assets/not-found.png" height="200px" width="200px" loading="lazy">
+                    <p>Location Not Found</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
